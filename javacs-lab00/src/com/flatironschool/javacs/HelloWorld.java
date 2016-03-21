@@ -1,11 +1,15 @@
-package com.flatironschool.javacs;
+	package com.flatironschool.javacs;
 
-public class HelloWorld {
-    public static Double getVersion() {
-        // I won't work!
-    }
+	public class HelloWorld {
+	    public static double getVersion() {
+	    	String javaVersionString = System.getProperty("java.specification.version");
+	    	Double javaVersion = Double.parseDouble(javaVersionString);
+	        return javaVersion;
+	        
+	    }
 
-    public static void main(String[] args) {
-	    // you can test the output of getVersion() here
-    }
-}
+	    public static void main(String[] args) {
+		   double javaVersion = getVersion();
+		   System.out.println(javaVersion);
+	    }
+	}
